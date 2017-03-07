@@ -1,0 +1,11 @@
+// import animate library
+@import "animate";
+
+// css variables
+$light: #fff !default;
+
+html, body{
+	height: 100%;
+	width: 100%;
+	font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !important;
+}
