@@ -20191,3 +20191,44 @@ html, body {
   .gallery-header img {
     max-width: 80px;
     max-height: 60px; }
+
+.page-numbers {
+  overflow: scroll; }
+
+.image-grid {
+  margin-top: 75px;
+  background-color: #E0F7FA;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.gallery-title {
+  margin-top: 50px; }
+  .gallery-title p {
+    color: #F57C00;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.2em;
+    font-weight: bolder;
+    font-size: 1.4em; }
+  .gallery-title img {
+    max-width: 40px;
+    max-height: 40px; }
+
+.gallery-search {
+  margin-left: 50px;
+  margin-top: 50px; }
+
+.gallery-pageNums .md-fab {
+  background-color: #F57C00 !important; }
+
+.gallery-search-query {
+  margin-left: 50px;
+  margin-top: 50px; }
+  .gallery-search-query p {
+    color: #14052C;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.2em;
+    font-weight: bolder;
+    font-size: 1em; }

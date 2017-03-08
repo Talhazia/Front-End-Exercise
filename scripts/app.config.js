@@ -7,14 +7,12 @@ angular.module('myApp', [
         'ngMaterial',
         'api.service',
         'api.directives',
-        'com.verico.ng-galleria'
+        'akoenig.deckgrid'
     ])
     .run(function() {
 
     })
-    .config(['$stateProvider', '$urlRouterProvider', 'galleriaProvider', function($stateProvider, $urlRouterProvider, galleriaProvider) {
-
-      galleriaProvider.setPath('./galleria/themes/classic/galleria.classic.js');
+    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
         $stateProvider
             .state('home', {
