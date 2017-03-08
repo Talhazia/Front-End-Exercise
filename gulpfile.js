@@ -13,8 +13,7 @@ var watch = require('gulp-watch');
 
 var paths = {
   sass: [
-    './scss/**/*.scss',
-    './node_modules/angular-material/angular-material.scss'
+    './scss/**/*.scss'
   ],
   scripts: [
     './scripts/*.js',
@@ -27,7 +26,8 @@ var paths = {
     './node_modules/angular-messages/angular-messages.js',
     './node_modules/angular-animate/angular-animate.js',
     './node_modules/angular-material/angular-material.js',
-    './node_modules/angular-ui-router/release/angular-ui-router.js'
+    './node_modules/angular-ui-router/release/angular-ui-router.js',
+    './node_modules/ng-galleria/ng-galleria.js'
   ]
 };
 

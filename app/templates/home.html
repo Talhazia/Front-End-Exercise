@@ -1,1 +1,27 @@
-home
+<section class="landing-page">
+  <section class="background-pic">
+    <img src="img/earth.jpg" />
+  </section>
+  <section class="main-header" layout="row" layout-align="center center" layout-margin flex>
+    <img class="animated zoomIn" ng-src="img/ibm-logo.png" />
+  </section>
+</section>
+
+<section class="landing-frame" flex="40" flex-offset="30" layout="column" layout-align"space-around center">
+  <p class="frame-header animated slideInDown">Front End Exercise</p>
+  <section class="job-info animated slideInUp" layout="row" layout-align="center center" layout-wrap>
+    <p flex="100">
+      Position: {{position}}
+    </p>
+    <p flex="40">
+      Candidate Name: {{candidateName}}
+    </p>
+    <p flex="40">
+      Hiring Manager: {{hiringManager}}
+    </p>
+  </section>
+</section>
+
+<section class="enter-button" layout="row" flex="20" flex-offset="40" layout-align="center center">
+  <md-button class="md-primary animated flash" ui-sref="gallery">ENTER</md-button>
+</section>

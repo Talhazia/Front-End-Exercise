@@ -5,18 +5,28 @@ angular.module('myApp', [
         'myApp.controllers',
         'ui.router',
         'ngMaterial',
-        'api.service'
+        'api.service',
+        'api.directives',
+        'com.verico.ng-galleria'
     ])
     .run(function() {
-      console.log("working");
+
     })
-    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', 'galleriaProvider', function($stateProvider, $urlRouterProvider, galleriaProvider) {
+
+      galleriaProvider.setPath('./galleria/themes/classic/galleria.classic.js');
 
         $stateProvider
             .state('home', {
                 url: '/home',
                 templateUrl: 'templates/home.html',
                 controller: 'HomeController'
+            })
+
+            .state('gallery', {
+                url: '/gallery',
+                templateUrl: 'templates/gallery.html',
+                controller: 'galleryController'
             });
 
         $urlRouterProvider.otherwise('/home');

@@ -1,11 +1,108 @@
 // import animate library
 @import "animate";
 
+// import angular material css
+@import "angular-material";
+
+// import fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 // css variables
-$light: #fff !default;
+$white: #F6F6F6 !default;
 
 html, body{
-	height: 100%;
-	width: 100%;
 	font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !important;
+	margin: 0;
+}
+
+.landing-page{
+	overflow-y: hidden;
+}
+
+.background-pic{
+  position: absolute;
+  min-width: 99vw;
+  min-height: 99vh;
+
+   img{
+    min-height: 99vh;
+    min-width: 99vw;
+
+    width: 100vw;
+    height: auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+   }
+}
+
+.main-header{
+
+	img{
+		position: relative;
+		 margin-top: 150px;
+		 max-width: 250px;
+		 max-height: 150px;
+	}
+
+}
+
+.landing-frame{
+	position: relative;
+	background-color: transparentize($white, 0.8);;
+	margin-top: 90px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+	.frame-header{
+		color: $white;
+		font-size: 2em;
+		text-align: center;
+		font-family: 'Raleway', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+	}
+
+	.job-info{
+		margin-top: 25px;
+
+		p{
+			color: #FFE0B2;
+			text-align: center;
+			font-size: 1em;
+			// font-family: 'Raleway', sans-serif;
+			text-transform: capitalize;
+			letter-spacing: 0.06em;
+			font-weight: 800;
+		}
+	}
+}
+
+.enter-button{
+	margin-top: 50px;
+
+	.md-button{
+		min-width: 200px;
+		font-size: 1.2em;
+		font-weight: 300;
+		color: $white;
+		text-align: center;
+		font-family: 'Raleway', sans-serif;
+		letter-spacing: 0.2em;
+	}
+
+	.md-button:hover {
+		font-weight: 800;
+		letter-spacing: 0.3em;
+	}
+}
+
+.gallery-header{
+	background-color: #14052C;
+	height: 70px;
+
+	img{
+		max-width: 80px;
+		max-height: 60px;
+	}
 }
