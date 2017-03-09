@@ -1,44 +1,37 @@
 <md-dialog aria-label="Flickr'n NASA">
     <md-toolbar>
-      <div class="md-toolbar-tools">
-        <h2>Flickr'n NASA</h2>
-        <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
-          <md-icon md-svg-src="img/svg/cancel.svg" aria-label="Close dialog"></md-icon>
-        </md-button>
-      </div>
+        <div class="md-toolbar-tools">
+            <h2>Flickr'n NASA</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-src="img/svg/cancel.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
     </md-toolbar>
 
     <md-dialog-content>
-      <div class="md-dialog-content" layout="column" layout-align="center center" ng-if="sizeExists">
-        <img alt="IBM-NASA-FLICKR" ng-src="{{newImage}}">
-        <p>
-          {{_photo.title}}
-        </p>
-      </div>
-      <div ng-if="!sizeExists" layout="row" layout-align="center center">
-        <p>
-          Please Select an Image Size
-        </p>
-      </div>
+        <div class="md-dialog-content" layout="column" layout-align="center center" ng-if="sizeExists">
+            <img class="animated zoomIn" alt="IBM-NASA-FLICKR" ng-src="{{newImage}}">
+            <p>
+                {{_photo.title}}
+            </p>
+        </div>
+        <div ng-if="!sizeExists" layout="row" layout-align="center center">
+            <p>
+                Please Select an Image Size
+            </p>
+        </div>
     </md-dialog-content>
 
     <md-dialog-actions layout="row" layout-align="center center">
-      <md-input-container>
-        <label>Size</label>
-        <md-select ng-model="selectedSize" ng-change="changeImage()">
-          <!-- <md-option><em>None</em></md-option> -->
-          <md-option ng-repeat="size in sizes" ng-value="size">
-            {{size.label}}
-          </md-option>
-        </md-select>
-      </md-input-container>
-      <!-- <span flex></span>
-      <md-button ng-click="answer('not useful')">
-       Not Useful
-      </md-button>
-      <md-button ng-click="answer('useful')">
-        Useful
-      </md-button> -->
+        <md-input-container>
+            <label>Size</label>
+            <md-select ng-model="selectedSize" ng-change="changeImage()">
+                <md-option><em>None</em></md-option>
+                <md-option ng-repeat="size in sizes" ng-value="size">
+                    {{size.label}}
+                </md-option>
+            </md-select>
+        </md-input-container>
     </md-dialog-actions>
 </md-dialog>

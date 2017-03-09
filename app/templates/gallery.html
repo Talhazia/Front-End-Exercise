@@ -1,38 +1,38 @@
 <section class="gallery-header animated slideInDown" layout="row" layout-align="center center" flex="100">
-  <img ng-src="img/ibm-logo.png" ui-sref="home" />
+    <img ng-src="img/ibm-logo.png" ui-sref="home" />
 </section>
 <section>
-  <div class="gallery-title animated slideInUp" layout="row" layout-align="center center" flex layout-margin>
-    <img ng-src="img/svg/gallery.svg" />
-    <p>
-      NASA - Flickr Gallery
-    </p>
-  </div>
-  <div class="gallery-search animated slideInLeft" layout="row" layout-margin>
-    <md-input-container md-no-float class="md-block">
-      <md-icon md-svg-src="img/svg/search.svg"></md-icon>
-      <input ng-model="search.title" type="text" placeholder="SEARCH">
-    </md-input-container>
-  </div>
+    <div class="gallery-title animated slideInUp" layout="row" layout-align="center center" flex layout-margin>
+        <img ng-src="img/svg/gallery.svg" />
+        <p>
+            NASA - Flickr Gallery
+        </p>
+    </div>
+    <div class="gallery-search animated slideInLeft" layout="row" layout-margin>
+        <md-input-container md-no-float class="md-block">
+            <md-icon md-svg-src="img/svg/search.svg"></md-icon>
+            <input ng-model="search.title" type="text" placeholder="SEARCH">
+        </md-input-container>
+    </div>
 </section>
 <section class="gallery-search-query animated slideInDown" layout="row" layout-align="start center" ng-show="search">
-  <p>
-    Searching for: {{search.title}}
-  </p>
+    <p>
+        Searching for: {{search.title}}
+    </p>
 </section>
 <section class="gallery-pageNums animated slideInRight" layout="row" layout-align="center center" layout-align-gt-sm="end center" layout-margin>
-  <md-button class="md-fab md-primary md-hue-2" aria-label="previous" ng-click="goBack()">
-      <md-icon md-svg-src="img/svg/back.svg"></md-icon>
-  </md-button>
-  <p>
-    PAGE {{currentPage}}
-  </p>
-  <md-button class="md-fab md-primary md-hue-2" aria-label="next" ng-click="goNext()">
-      <md-icon md-svg-src="img/svg/next.svg"></md-icon>
-  </md-button>
+    <md-button class="md-fab md-primary md-hue-2" aria-label="previous" ng-click="goBack()">
+        <md-icon md-svg-src="img/svg/back.svg"></md-icon>
+    </md-button>
+    <p>
+        PAGE {{currentPage}}
+    </p>
+    <md-button class="md-fab md-primary md-hue-2" aria-label="next" ng-click="goNext()">
+        <md-icon md-svg-src="img/svg/next.svg"></md-icon>
+    </md-button>
 </section>
 <section class="image-grid animated zoomIn" layout="row" layout-wrap layout-align="space-around center" layout-margin layout-padding>
-  <md-card ng-repeat="photo in photos | filter:search">
-      <display-photo ng-click="openImage(photo, $event)" photo="photo"></display-photo>
-  </md-card>
+    <md-card ng-repeat="photo in photos | filter:search">
+        <display-photo ng-click="openImage(photo, $event)" photo="photo"></display-photo>
+    </md-card>
 </section>
