@@ -4,9 +4,8 @@ angular.module('myApp.controllers', [])
 
 .controller('galleryController', ['apiData', '$scope', '$timeout', '$mdDialog', function(apiData, $scope, $timeout, $mdDialog) {
     console.log("galleryController loeaded");
-    $scope.photos= {};
+    $scope.photos= [];
     $scope.selectedSize = 'b';
-    // $scope.pages = [];
     $scope.currentPage = 1;
 
     $scope.$watch('photos', function(){

@@ -20196,8 +20196,8 @@ html, body {
   overflow: scroll; }
 
 .image-grid {
-  margin-top: 75px;
-  background-color: #E0F7FA;
+  margin-top: 60px;
+  background-color: rgba(251, 233, 231, 0.3);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .gallery-title {
@@ -20216,14 +20216,20 @@ html, body {
 
 .gallery-search {
   margin-left: 50px;
-  margin-top: 50px; }
+  margin-top: 40px; }
+  .gallery-search md-input-container:not(.md-input-has-value) input:not(:focus) {
+    border-bottom: 1px solid #14052C; }
 
 .gallery-pageNums .md-fab {
   background-color: #F57C00 !important; }
 
+.gallery-pageNums p {
+  color: #14052C;
+  font-weight: 800; }
+
 .gallery-search-query {
   margin-left: 50px;
-  margin-top: 50px; }
+  margin-top: 40px; }
   .gallery-search-query p {
     color: #14052C;
     text-transform: uppercase;
@@ -20232,3 +20238,42 @@ html, body {
     letter-spacing: 0.2em;
     font-weight: bolder;
     font-size: 1em; }
+
+@media only screen and (max-width: 500px) {
+  html, body {
+    font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !important;
+    margin: 0;
+    height: 100%; }
+  .main-header img {
+    position: relative;
+    margin-top: 50px;
+    max-width: 250px;
+    max-height: 175px; }
+  .landing-frame {
+    margin-top: 50px; }
+    .landing-frame .frame-header {
+      font-size: 1.4em; }
+    .landing-frame .job-info {
+      margin-top: 25px; }
+      .landing-frame .job-info p {
+        font-size: 0.8em; }
+  .gallery-title {
+    margin-top: 25px; }
+    .gallery-title p {
+      font-size: 1em; }
+    .gallery-title img {
+      max-width: 40px;
+      max-height: 40px; }
+  .gallery-search {
+    margin-left: 50px;
+    margin-top: 10px; }
+  .gallery-pageNums .md-fab {
+    max-width: 35px;
+    max-height: 25px; }
+  .image-grid {
+    margin-top: 35px; }
+  .gallery-search-query {
+    margin-left: 25px;
+    margin-top: 20px; }
+    .gallery-search-query p {
+      font-size: 0.8em; } }

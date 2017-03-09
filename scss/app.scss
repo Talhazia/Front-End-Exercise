@@ -7,6 +7,8 @@
 
 // css variables
 $white: #F6F6F6 !default;
+$dark: #F57C00 !default;
+$blue: #14052C !default;
 
 html, body{
 	font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !important;
@@ -48,7 +50,7 @@ html, body{
 
 .landing-frame{
 	position: relative;
-	background-color: transparentize($white, 0.8);;
+	background-color: transparentize($white, 0.8);
 	margin-top: 90px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -96,7 +98,7 @@ html, body{
 }
 
 .gallery-header{
-	background-color: #14052C;
+	background-color: $blue;
 	height: 70px;
 
 	img{
@@ -110,8 +112,8 @@ html, body{
 }
 
 .image-grid{
-	margin-top: 75px;
-	background-color: #E0F7FA;
+	margin-top: 60px;
+	background-color: transparentize(#FBE9E7, 0.7);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -119,7 +121,7 @@ html, body{
 	margin-top: 50px;
 
 	p{
-		color: #F57C00;
+		color: $dark;
 		text-transform: uppercase;
 		text-align: center;
 		font-family: 'Raleway', sans-serif;
@@ -136,30 +138,31 @@ html, body{
 
 .gallery-search{
 	margin-left: 50px;
-	margin-top: 50px;
+	margin-top: 40px;
+
+	md-input-container:not(.md-input-has-value) input:not(:focus){
+		border-bottom: 1px solid $blue;
+	}
 }
-//
-// md-dialog {
-//     max-width: 100%;
-//     max-height: 100%;
-//     width: 100%;
-//     height: 100%;
-//     border-radius: 0;
-// }
 
 .gallery-pageNums{
 
 	.md-fab{
-		background-color: #F57C00 !important;
+		background-color: $dark !important;
+	}
+
+	p{
+		color: $blue;
+		font-weight: 800;
 	}
 }
 
 .gallery-search-query{
 	margin-left: 50px;
-	margin-top: 50px;
+	margin-top: 40px;
 
 	p{
-		color: #14052C;
+		color: $blue;
 		text-transform: uppercase;
 		text-align: center;
 		font-family: 'Raleway', sans-serif;
@@ -167,4 +170,81 @@ html, body{
 		font-weight: bolder;
 		font-size: 1em;
 	}
+}
+
+// mobile media query
+@media only screen and (max-width: 500px) {
+
+	html, body{
+		font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !important;
+		margin: 0;
+		height: 100%;
+	}
+
+  .main-header{
+
+  	img{
+  		position: relative;
+  		 margin-top: 50px;
+  		 max-width: 250px;
+  		 max-height: 175px;
+  	}
+
+  }
+
+  .landing-frame{
+  	margin-top: 50px;
+
+  	.frame-header{
+  		font-size: 1.4em;
+  	}
+
+  	.job-info{
+  		margin-top: 25px;
+
+  		p{
+  			font-size: 0.8em;
+  		}
+  	}
+  }
+
+	.gallery-title{
+		margin-top: 25px;
+
+		p{
+			font-size: 1em;
+		}
+
+		img{
+			max-width: 40px;
+			max-height: 40px;
+		}
+	}
+
+	.gallery-search{
+		margin-left: 50px;
+		margin-top: 10px;
+	}
+
+	.gallery-pageNums{
+
+		.md-fab{
+			max-width: 35px;
+			max-height: 25px;
+		}
+	}
+
+	.image-grid{
+		margin-top: 35px;
+	}
+
+	.gallery-search-query{
+		margin-left: 25px;
+		margin-top: 20px;
+
+		p{
+			font-size: 0.8em;
+		}
+	}
+
 }

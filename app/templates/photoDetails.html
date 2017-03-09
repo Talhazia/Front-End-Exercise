@@ -4,7 +4,7 @@
         <h2>Flickr'n NASA</h2>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
-          <!-- <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon> -->
+          <md-icon md-svg-src="img/svg/cancel.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
     </md-toolbar>
@@ -16,9 +16,14 @@
           {{_photo.title}}
         </p>
       </div>
+      <div ng-if="!sizeExists" layout="row" layout-align="center center">
+        <p>
+          Please Select an Image Size
+        </p>
+      </div>
     </md-dialog-content>
 
-    <md-dialog-actions layout="row">
+    <md-dialog-actions layout="row" layout-align="center center">
       <md-input-container>
         <label>Size</label>
         <md-select ng-model="selectedSize" ng-change="changeImage()">
