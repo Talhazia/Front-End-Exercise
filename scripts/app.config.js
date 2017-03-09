@@ -6,8 +6,7 @@ angular.module('myApp', [
         'ui.router',
         'ngMaterial',
         'api.service',
-        'api.directives',
-        'akoenig.deckgrid'
+        'api.directives'
     ])
     .run(function() {
 

@@ -43,7 +43,7 @@ angular.module('myApp.controllers', [])
                     locals: {
                         dataToPass: photo
                     },
-                    fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+                    fullscreen: $scope.customFullscreen 
                 })
                 .then(function() {});
         }
